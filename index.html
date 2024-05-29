@@ -12,17 +12,48 @@
                 background-position: center;
                 */
             }
+
+            .collapsible {
+                background-color: #777;
+                color: white;
+                cursor: pointer;
+                padding: 18px;
+                width: 100%;
+                border: none;
+                text-align: left;
+                outline: none;
+                font-size: 15px;
+            }
+
+            .active, .collapsible:hover {
+                background-color: #555;
+            }
+
+            .collapsible:after {
+                content: '\002B';
+                color: white;
+                font-weight: bold;
+                float: right;
+                margin-left: 5px;
+            }
+
+            .active:after {
+                content: "\2212";
+            }
+
+            .content {
+                padding: 0 18px;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.2s ease-out;
+                background-color: #f1f1f1;
+            }
         </style>
     </head>
 
     <body>
-        <a href="index.html#about">About</a>
-        <a href="index.html#info">Info</a>
-        <a href="index.html#logistics">Logistics</a>
-        <a href="index.html#contact">Contact</a>
-
-        <div id="about">
-            <h1>About</h1>
+        <button class="collapsible">About</button>
+        <div class="content">
             <p>Welcome to Bass Reunion, NYC's premier destination for fun, games, and dubstep!</p>
             <p>
                 Our aim is to provide a family-friendly atmosphere for music lovers to congregate, network, and dance. 
@@ -31,16 +62,18 @@
                 Come take in breathtaking views, enjoy the world-class sound system, and get your party on! 💃
             </p>
         </div>
-        <div id="info">
-            <h1>Info</h1>
+
+        <button class="collapsible">Info</button>
+        <div class="content">
             <ul>
                 <li>Date: Saturday, July 7, 2024</li>
                 <li>Time: 2:00pm - 8:00pm</li>
                 <li>Location: <a href="https://www.bkbackyard.com/">BK Backyard</a>, 86 N 11th St, Brooklyn, NY 11249</li>
             </ul>
         </div>
-        <div id="logistics">
-            <h1>Logistics</h1>
+
+        <button class="collapsible">Logistics</button>
+        <div class="content">
             <p>
                 Due to the party nature of our event, it is highly encouraged to stay a while after we wind down. 
                 This is NYC, why not make a weekend of it! 
@@ -62,13 +95,30 @@
                 <li>🚐 Sleep in your car like a real wook (not officially recommended by the team)</li>
             </ul>
         </div>
-        <div id="contact">
-            <h1>Contact</h1>
+
+        <button class="collapsible">Contact</button>
+        <div class="content">
             <p>
                 Got a specific question? 
                 Contact us at <a href="mailto:info@bassreunion.nyc">info@bassreunion.nyc</a> and we're happy to help!
             </p>
         </div>
 
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.maxHeight){
+                    content.style.maxHeight = null;
+                    } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    } 
+                });
+            }
+        </script>
     </body>
 </html>
