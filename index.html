@@ -7,10 +7,6 @@
         <style>
             body {
                 font-family: "Arial", "Helvetica", "sans-serif";
-                /*
-                background-image: url("images/bk_backyard.jpeg");
-                background-position: center;
-                */
             }
 
             .collapsible {
@@ -56,6 +52,13 @@
                 max-width: 100%;
                 max-height: 600px;
                 height: auto;
+            }
+
+            .sticky {
+                position: sticky;
+                bottom: 10px;
+                width: 120px;
+                left: 50%;
             }
         </style>
     </head>
@@ -117,6 +120,10 @@
                 Contact us at <a href="mailto:info@bassreunion.nyc">info@bassreunion.nyc</a> and we're happy to help!
             </p>
         </div>
+
+        <button class="sticky">
+            Buy Tickets 🎫
+        </button>
 
         <script>
             const coll = document.getElementsByClassName("collapsible");
