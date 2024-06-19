@@ -3,6 +3,7 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <style>
             body {
@@ -54,18 +55,38 @@
                 height: auto;
             }
 
-            .sticky {
-                position: sticky;
-                bottom: 10px;
-                width: 120px;
-                left: 50%;
+            .icon-bar {
+                position: fixed;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
             }
+
+            .icon-bar a {
+                display: block;
+                text-align: center;
+                padding: 16px;
+                transition: all 0.3s ease;
+                background-color: #c4d8e3;
+                color: white;
+            }
+
+            .icon-bar a:hover {
+                background-color: #000;
+            }
+
         </style>
     </head>
 
     <body>
+
+        <div class="icon-bar">
+            <a href="https://posh.vip/e/summer-reunion" target="_blank" style="text-decoration:none"><p>Tickets 🎫</p></a> 
+        </div>
+
         <div style="background-image: url('images/bk_backyard.jpeg'); background-position: center; background-size: 100%;">
-            <img class="flyer" src="images/Bass Reunion [Gamers].png" alt="Flyer">
+            <img class="flyer" src="images/flyer_qr.png" alt="Flyer">
         </div>
         <br>
 
@@ -120,10 +141,6 @@
                 Contact us at <a href="mailto:info@bassreunion.nyc">info@bassreunion.nyc</a> and we're happy to help!
             </p>
         </div>
-
-        <button class="sticky">
-            Buy Tickets 🎫
-        </button>
 
         <script>
             const coll = document.getElementsByClassName("collapsible");
