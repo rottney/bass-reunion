@@ -3,7 +3,6 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <style>
             body {
@@ -11,7 +10,7 @@
             }
 
             .collapsible {
-                background-color: #777;
+                background-color: #4d6d80;
                 color: white;
                 cursor: pointer;
                 padding: 18px;
@@ -23,7 +22,7 @@
             }
 
             .active, .collapsible:hover {
-                background-color: #555;
+                background-color: #0f3170;
             }
 
             .collapsible:after {
@@ -58,6 +57,7 @@
             .icon-bar {
                 position: fixed;
                 top: 50%;
+                right: 2%;
                 -webkit-transform: translateY(-50%);
                 -ms-transform: translateY(-50%);
                 transform: translateY(-50%);
@@ -66,23 +66,30 @@
             .icon-bar a {
                 display: block;
                 text-align: center;
-                padding: 16px;
+                padding: 8px;
                 transition: all 0.3s ease;
-                background-color: #c4d8e3;
-                color: white;
+                background-color: #f13d56;
+                color: #1f9c85;
             }
 
             .icon-bar a:hover {
                 background-color: #000;
             }
 
+            .center {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 50px;
+                /* border: 3px solid green; */
+            }
         </style>
     </head>
 
     <body>
 
         <div class="icon-bar">
-            <a href="https://posh.vip/e/summer-reunion" target="_blank" style="text-decoration:none"><p>Tickets 🎫</p></a> 
+            <a href="https://posh.vip/e/summer-reunion" target="_blank" style="text-decoration:none"><strong>TIX 🎫</strong></a> 
         </div>
 
         <div style="background-image: url('images/bk_backyard.jpeg'); background-position: center; background-size: 100%;">
@@ -92,7 +99,7 @@
 
         <button class="collapsible">About</button>
         <div class="content">
-            <p>Welcome to Bass Reunion, NYC's premier destination for fun, games, and dubstep!</p>
+            <p>Welcome to Summer Reunion, NYC's premier destination for fun, games, and dubstep!</p>
             <p>
                 Our aim is to provide a family-friendly atmosphere for music lovers to congregate, network, and dance. 
                 The venue, <a href="https://www.bkbackyard.com/">BK Backyard</a>, has a full-sized beach volleyball court, 
@@ -138,8 +145,15 @@
         <div class="content">
             <p>
                 Got a specific question? 
-                Contact us at <a href="mailto:info@bassreunion.nyc">info@bassreunion.nyc</a> and we're happy to help!
+                Contact us at <a href="mailto:info@summerreunion.nyc">info@summerreunion.nyc</a> and we're happy to help!
             </p>
+        </div>
+        <br>
+
+        <div class="center">
+            <a href="https://www.instagram.com/summerreunionbk/" target="_blank"> <!--style="text-decoration:none">-->
+                <img src="images/instagram.png" height="24px">
+            </a>
         </div>
 
         <script>
