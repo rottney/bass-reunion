@@ -82,19 +82,45 @@
                 align-items: center;
                 height: 50px;
             }
+
+
+            @media only screen and (min-width: 617px) {
+                iframe.frame {
+                    height: 487px;
+                    display: block;
+                    width: 100%;
+                    border: none;
+                }
+            }
+
+            @media only screen and (max-width:616px) {
+                iframe.frame {
+                    height: 600px;
+                    display: block;
+                    width: 100%;
+                    border: none;
+                }
+            }
         </style>
     </head>
 
     <body>
 
+        <!--
         <div class="icon-bar">
             <a href="https://posh.vip/e/summer-reunion" target="_blank" style="text-decoration:none"><strong>TIX 🎫</strong></a> 
         </div>
+        -->
 
         <div style="background-image: url('images/BK\ Backyard\ -\ Filter.jpg'); background-position: center; background-size: 100%;">
             <img class="flyer" src="images/flyer_qr.png" alt="Flyer">
         </div>
         <br>
+
+        <!--
+        <iframe src="https://embed.posh.vip/ticket-iframe/666c3b4e8db4703a1f7bed5c/" height="600px" width="100%" style="border: none"></iframe>
+        -->
+        <iframe src="https://embed.posh.vip/ticket-iframe/666c3b4e8db4703a1f7bed5c/" class="frame"></iframe>
 
         <button class="collapsible">About</button>
         <div class="content">
@@ -150,9 +176,15 @@
         <br>
 
         <div class="center">
+            <h3>🎶 Official Summer Reunion Playlist 🎶</h3>
+        </div>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/77sAPihZ56RPsPMj4fw09W?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+        <div class="center">
             <a href="https://www.instagram.com/summerreunionbk/" target="_blank"> <!--style="text-decoration:none">-->
                 <img src="images/instagram.png" height="24px">
             </a>
+            <pre style="font-family: 'Arial', 'Helvetica', 'sans-serif';"> Official IG page</pre>
         </div>
 
         <script>
